@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - Docker
+
+before_install:
+  - Docker build -t omiieee/Docker-react -f Dockerfile.dev .
+
+script:
+  - Docker run omiieee/Docker-react npm run test -- --coverage
