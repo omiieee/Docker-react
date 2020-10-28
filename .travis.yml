@@ -3,7 +3,7 @@ services:
   - Docker
 
 before_install:
-  - Docker build -f Dockerfile.dev .
+  - docker build -f Dockerfile.dev .
 
 script:
-  - Docker run omiieee/Docker-react npm run test -- --coverage
+  - docker run omiieee/Docker-react npm run test -- --coverage
